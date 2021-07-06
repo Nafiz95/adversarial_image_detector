@@ -1,0 +1,46 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h1 class="display-4">Image Adversarial Attack Detector</h1>
+    <p class="lead">Upload an image to see if it has been a victim of an image adversarial attack.</p>
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    <h3>Upload Image</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Accepted Format: PNG</h5>
+    
+    <form method="post" enctype="multipart/form-data" style="display: inline-block;">
+      {% csrf_token %}
+      {{ form.as_p }}
+
+      <button type="submit" class="btn btn-dark">Upload</button>
+    </form>
+  
+  </div>
+  <div class="card-footer text-muted">
+    Please wait for few moments while we analyze your image
+  </div>
+</div>
+{% if has_image %}
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">Uploaded Image</h1>
+      
+              <div class="col-lg-auto">
+                      {{ images.pic.url }}
+                      <img src="{{ images.pic.url }}" class="img-responsive" style="width: 100%; margin-right: 10px;" />
+              </div>
+      
+    </div>
+  </div>
+{% endif %}
+
+
+       
+
+{% endblock content %}

@@ -1,0 +1,10 @@
+{
+  "ENV": "prod",
+  "SECRET_KEY": "ig_((@-4ih_2g&jzzz=&1xnhimaw0v3^4y3&zoe_=&pj)+khd3",
+  "ALLOWED_HOSTS": [
+    "127.0.0.1",
+    "localhost"
+  ],
+  "STATIC_ROOT": "/home/nafiz/SOL/Adversarial Image Detector/adv/static_files",
+  "MEDIA_ROOT": "/home/nafiz/SOL/Adversarial Image Detector/adv/static_files"
+}
