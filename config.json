@@ -5,6 +5,7 @@
     "127.0.0.1",
     "localhost"
   ],
+  "MODEL_PATH": "/home/nafiz/SOL/Adversarial Image Detector/adversarial_image_detector/adv_img_detect/svm_binaryClassificationModel.sav",
   "STATIC_ROOT": "/home/nafiz/SOL/Adversarial Image Detector/adv/static_files",
   "MEDIA_ROOT": "/home/nafiz/SOL/Adversarial Image Detector/adv/static_files"
 }

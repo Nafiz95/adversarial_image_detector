@@ -32,7 +32,15 @@
       <h1 class="display-4">Uploaded Image</h1>
       
               <div class="col-lg-auto">
-                      {{ images.pic.url }}
+        
+                      {% if pred == 1 %}
+                        <h3><span class="badge badge-dark">Attacked</span></h3>
+                      {% endif %}
+                      {% if pred == 0 %}
+                        <h3><span class="badge badge-success">Clean</span></h3>
+                      {% endif %}
+                      <hr>
+
                       <img src="{{ images.pic.url }}" class="img-responsive" style="width: 100%; margin-right: 10px;" />
               </div>
       
